@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>bromo.com | Tiket & Paket Wisata Gunung Bromo</title>
+<style>
+:root{--bg:#fffaf3;--surface:#ffffff;--text:#2a1f1a;--muted:#6b5b52;--accent:#e2571f;--accent-text:#ffffff;--line:#eadfd3;--hero1:#ff9a4d;--hero2:#b3361b;--hero3:#3b1d3a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110f;--surface:#231a17;--text:#f5ebe4;--muted:#b8a79d;--accent:#ff7a3d;--accent-text:#1a0e08;--line:#3a2c26}}
+:root[data-theme="dark"]{--bg:#17110f;--surface:#231a17;--text:#f5ebe4;--muted:#b8a79d;--accent:#ff7a3d;--accent-text:#1a0e08;--line:#3a2c26}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-weight:800;font-size:1.25rem;color:#fff}
+.logo span{opacity:.75}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:.95rem}
+.hero{background:linear-gradient(180deg,var(--hero1) 0%,var(--hero2) 55%,var(--hero3) 100%);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{padding-top:8px;padding-bottom:110px}
+.sun{position:absolute;right:12%;bottom:70px;width:120px;height:120px;border-radius:50%;background:#ffe9b0;opacity:.9;box-shadow:0 0 80px 30px rgba(255,220,150,.5)}
+.ridge{position:absolute;left:0;right:0;bottom:0;height:90px;background:var(--bg);clip-path:polygon(0 70%,12% 45%,25% 65%,40% 25%,55% 60%,70% 35%,85% 62%,100% 40%,100% 100%,0 100%)}
+h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.15;margin:48px 0 14px;max-width:640px}
+.hero p{max-width:520px;font-size:1.1rem;margin:0 0 26px;opacity:.95}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:0;font-size:1rem}
+.btn.ghost{background:transparent;color:#fff;border:2px solid #fff;margin-left:10px}
+section{padding:56px 0}
+h2{font-size:1.7rem;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card .ic{font-size:1.8rem}
+.card h3{margin:8px 0 6px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.price{font-size:1.5rem;font-weight:800;color:var(--accent);margin:10px 0}
+.card ul{padding-left:18px;margin:0 0 16px;color:var(--muted);font-size:.95rem}
+.pop{border:2px solid var(--accent);position:relative}
+.tag{position:absolute;top:-12px;left:20px;background:var(--accent);color:var(--accent-text);font-size:.75rem;font-weight:700;padding:3px 12px;border-radius:999px}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 20px 20px 64px;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--accent-text);display:grid;place-items:center;font-weight:800}
+.cta{background:linear-gradient(135deg,var(--hero2),var(--hero3));color:#fff;border-radius:24px;padding:44px 28px;text-align:center}
+.cta p{margin:0 auto 22px;max-width:480px;opacity:.95}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:#25d366;color:#0b2e17;font-weight:700;text-decoration:none;padding:13px 20px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.3);z-index:20}
+footer{padding:28px 0;color:var(--muted);text-align:center;font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:560px){nav{display:none}.sun{width:80px;height:80px;right:8%}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="sun"></div>
+  <div class="wrap">
+    <header>
+      <div class="logo">bromo<span>.com</span></div>
+      <nav><a href="#keunggulan">Keunggulan</a><a href="#paket">Paket</a><a href="#cara">Cara Pesan</a><a href="#pesan">Pesan</a></nav>
+    </header>
+    <h1>Liburan ke Gunung Bromo, pesan lewat bromo.com</h1>
+    <p>Tiket masuk dan paket wisata lengkap dengan harga terjangkau. Pesan online dengan mudah dan cepat.</p>
+    <a class="btn" href="#paket">Lihat Paket Wisata</a><a class="btn ghost" href="#cara">Cara Pesan</a>
+  </div>
+  <div class="ridge"></div>
+</div>
+
+<main>
+<section id="keunggulan"><div class="wrap">
+  <h2>Kenapa pesan di bromo.com?</h2>
+  <p class="sub">Semua kebutuhan perjalanan ke Bromo ada di satu tempat.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🎟️</div><h3>Tiket mudah</h3><p>Pesan tiket masuk secara online tanpa antre panjang.</p></div>
+    <div class="card"><div class="ic">💰</div><h3>Harga transparan</h3><p>Harga jelas sejak awal, tanpa biaya tersembunyi.</p></div>
+    <div class="card"><div class="ic">🚙</div><h3>Paket lengkap</h3><p>Jeep, penginapan, dan pemandu bisa dipilih sesuai kebutuhan.</p></div>
+    <div class="card"><div class="ic">💬</div><h3>Respons cepat</h3><p>Tim kami siap membantu pertanyaan Anda sebelum berangkat.</p></div>
+  </div>
+</div></section>
+
+<section id="paket"><div class="wrap">
+  <h2>Pilihan paket wisata</h2>
+  <p class="sub">Contoh paket, sesuaikan harga dan isi dengan penawaran Anda.</p>
+  <div class="grid">
+    <div class="card"><h3>Paket Hemat</h3><div class="price">Rp 350.000</div>
+      <ul><li>Tiket masuk Bromo</li><li>Jeep sunrise (sharing)</li><li>Pemandu lokal</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/6281947854115?text=Halo%20bromo.com%2C%20saya%20mau%20pesan%20Paket%20Hemat">Pesan via WhatsApp</a></div>
+    <div class="card pop"><span class="tag">Terlaris</span><h3>Paket Sunrise</h3><div class="price">Rp 650.000</div>
+      <ul><li>Tiket masuk Bromo</li><li>Jeep private</li><li>Penanjakan, Kawah, Savana</li><li>Pemandu lokal</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/6281947854115?text=Halo%20bromo.com%2C%20saya%20mau%20pesan%20Paket%20Sunrise">Pesan via WhatsApp</a></div>
+    <div class="card"><h3>Paket Lengkap</h3><div class="price">Rp 1.200.000</div>
+      <ul><li>Tiket &amp; jeep private</li><li>Penginapan 1 malam</li><li>Sarapan &amp; pemandu</li></ul><a class="btn" target="_blank" rel="noopener" href="https://wa.me/6281947854115?text=Halo%20bromo.com%2C%20saya%20mau%20pesan%20Paket%20Lengkap">Pesan via WhatsApp</a></div>
+  </div>
+</div></section>
+
+<section id="cara"><div class="wrap">
+  <h2>Cara pesan</h2>
+  <p class="sub">Hanya tiga langkah.</p>
+  <div class="steps">
+    <div class="step"><b>Pilih paket</b><br><span class="sub">Tentukan paket dan tanggal.</span></div>
+    <div class="step"><b>Isi data</b><br><span class="sub">Lengkapi data pemesan.</span></div>
+    <div class="step"><b>Bayar &amp; berangkat</b><br><span class="sub">Konfirmasi dikirim langsung.</span></div>
+  </div>
+</div></section>
+
+<section id="pesan"><div class="wrap">
+  <div class="cta">
+    <h2>Siap berangkat ke Bromo?</h2>
+    <p>Amankan tiket dan paket wisata Anda sekarang di bromo.com.</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://wa.me/6281947854115?text=Halo%20bromo.com%2C%20saya%20mau%20tanya%20paket%20wisata%20Bromo">Chat WhatsApp Sekarang</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 bromo.com · Tiket &amp; paket wisata Gunung Bromo</div></footer>
+<a class="wa" target="_blank" rel="noopener" href="https://wa.me/6281947854115?text=Halo%20bromo.com%2C%20saya%20mau%20tanya%20paket%20wisata%20Bromo">💬 Chat WhatsApp</a>
+</body>
+</html>
